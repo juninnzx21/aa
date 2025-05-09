@@ -1,62 +1,69 @@
-[<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# Cassino Online - Projeto de Portfólio
+OBS: rode um npm install e um composer install antes de qualquer coisa.
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Este projeto é um site de cassino online, criado para demonstrar meus conhecimentos em desenvolvimento web, especialmente para vagas de emprego. O sistema possui um único jogo disponível no momento, com funcionalidades de login, registro de usuários e um sistema de saldo. O projeto foi desenvolvido utilizando **Vite**, **Laravel** e **PHP**.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Como Iniciar o Projeto
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+1. **Iniciar o servidor de desenvolvimento:**
 
-## Learning Laravel
+   Para iniciar o front-end e back-end do projeto, execute o seguinte comando:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+   ```bash
+   npm run dev
+   ```
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+   Este comando vai iniciar o Vite, responsável pelo desenvolvimento do front-end, junto com o Laravel, que cuida da parte do servidor.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+2. **Iniciar o servidor Laravel:**
 
-## Laravel Sponsors
+   Para iniciar o servidor do Laravel, execute:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+   ```bash
+   php artisan serve
+   ```
 
-### Premium Partners
+3. **Executar as migrations:**
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development/)**
-- **[Active Logic](https://activelogic.com)**
+   Para criar as tabelas no banco de dados, execute:
 
-## Contributing
+   ```bash
+   php artisan migrate
+   ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+4. **Criar um usuário padrão:**
 
-## Code of Conduct
+   O comando a seguir vai criar um usuário padrão no sistema:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+   ```bash
+   php artisan db:seed
+   ```
 
-## Security Vulnerabilities
+   Ao rodar esse comando, o usuário criado já virá com um saldo de 100 BRL.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Funcionamento do Site
 
-## License
+Ao acessar o site, você será redirecionado para a página inicial. Um mini passo a passo será exibido para guiar a navegação.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-](https://github.com/juninnzx21/aa.git)
+### Opções de Acesso
+
+1. **Login / Registro:**
+   
+   - Na página inicial, você pode fazer login ou criar uma nova conta.
+   - Caso não tenha conta, o sistema oferece uma opção de registro. 
+
+2. **Página de Jogo:**
+
+   - Após fazer o login, você será redirecionado para a página do jogo (atualmente, temos apenas um jogo disponível).
+   - No canto superior direito, no menu, aparecerá um link chamado "Games". 
+   - Você pode acessar os jogos através desse menu ou pelo ícone do hambúrguer no canto superior esquerdo.
+
+### Requisitos para Jogar
+
+- **Autenticação:** Você precisa estar logado para jogar.
+- **Saldo:** É necessário ter saldo para jogar. Caso o usuário não tenha saldo, poderá adicionar através da interface.
+- Ao rodar o comando de seed, o usuário já começa com um saldo de 100 BRL.
+
+Este projeto é uma simulação de um site de cassino, com foco em demonstrar minhas habilidades de desenvolvimento.
